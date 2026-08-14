@@ -33,6 +33,8 @@ public class DispatchRoutes : ControllerBase
     }
 
     [HttpGet("query_dispatch")]
+    [HttpPost("query_dispatch")]
+    [HttpHead("query_dispatch")]
     public IActionResult QueryDispatch()
     {
         if (!Config.ServerOption.ServerConfig.RunDispatch)
@@ -367,3 +369,4 @@ public class DispatchRoutes : ControllerBase
         };
     }
 }
+
